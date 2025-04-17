@@ -1,0 +1,62 @@
+<html>
+<head>
+{{>partials/header}}
+</head>
+
+<body class="container-fluid py-5 bg-light mt-4">
+<div class="container">
+        <h1 class="mb-5 text-center fw-light">{{title}}</h1>
+
+        {{#class}}
+        <div class="card mb-4 shadow-sm ">
+            <div class="card-body">
+            <div class="d-flex">
+                <div class="m-1">
+                    <h3 class="card-title fw-semibold mb-3">{{name}}</h3>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex">
+                    <p>Price:£ </p>
+                    <p>{{price}}</p>
+                </div>
+                <div class="d-flex">
+                    <p>Location: </p>
+                    <p>{{location}}</p>
+                </div>
+                <div class="d-flex">
+                    <p>Description: </p>
+                    <p>{{description}}</p>
+                </div>
+                <div class="d-flex">
+                    <p>Time: </p>
+                    <p>{{time}}</p>
+                </div>
+                <div class="d-flex">
+                    <p>Date: </p>
+                    <p>{{date}}</p>
+                </div>
+
+            </div>
+            </div>
+                <div class="d-flex ">
+                   <a href="/course/{{courseid}}/bookclass/{{_id}}"class="btn btn-primary btn-lg">Join Class</a>
+                    
+                </div>
+            </div>
+        </div>
+        {{/class}}
+
+    </div>
+<div>
+
+    {{^class}}
+        <div class="alert alert-info mt-3">
+            No classes .
+        </div>
+    {{/class}}
+</div>
+</body>
+</html>
+
+

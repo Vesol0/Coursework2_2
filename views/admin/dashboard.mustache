@@ -1,0 +1,31 @@
+<html>
+<head>
+{{>partials/header}}
+
+</head>
+
+
+<body class="container-fluid py-5 bg-light">
+    <div class="container">
+        <h1 class="mb-5 text-center fw-light">{{title}}</h1>
+
+        {{#course}}
+        <div class="card mb-4 shadow-sm ">
+            <div class="card-body">
+                <h3 class="card-title fw-semibold mb-3">{{name}}</h3>
+                <div class="d-flex ">
+                    <a href="/dashboard/course/{{_id}}/remove" class="btn btn-outline-danger btn-sm">Remove Course</a>
+                    <a href="/dashboard/course/{{_id}}/manageclass" class="btn btn-outline-primary btn-sm">Manage Class Details</a>
+                </div>
+            </div>
+        </div>
+        {{/course}}
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="/dashboard/manageorganiser/" class="btn btn-outline-dark btn-sm">Manage Organisers</a>
+            <a href="/dashboard/manageusers/" class="btn btn-outline-dark btn-sm">Manage Users</a>
+            <a href="/dashboard/course/addcourse" class="btn btn-outline-dark btn-sm">Add Course</a>
+        </div>
+    </div>
+</body>
+</html>

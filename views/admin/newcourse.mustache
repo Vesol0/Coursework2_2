@@ -1,0 +1,28 @@
+<html>
+<head>
+{{>partials/header}}
+</head>
+<body class="container-fluid py-5 bg-light">
+<h2>Write a new course</h2>
+
+
+<form method="post" role="/dashboard/course/addcourse">
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" class="form-control" id="name" name="name"placeholder="coursename" required>
+</div>
+<div class="form-group">
+<label for="duration">Duration</label>
+<input type="text" class="form-control" id="duration" name="duration" placeholder="Duration" required>
+</div>
+<div class="form-group">
+<label for="contents">Current</label>
+<textarea class="form-control" id="current" name="current" placeholder="current" rows="3" required>
+</textarea>
+</div>
+<div class="form-group">
+<input type="submit" value="Post course" class="btn btn-primary">
+</div>
+</form>
+</body>
+</html>

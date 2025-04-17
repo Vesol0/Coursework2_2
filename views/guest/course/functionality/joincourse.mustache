@@ -1,0 +1,33 @@
+<html>
+<head>
+{{>partials/header}}
+</head>
+<body class="container-fluid py-5 bg-light">
+{{#entries}}
+<h2>Join Course</h2>
+
+
+<form method="post" role="/joincourse/{{_id}}">
+    <div class="form-group">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname"placeholder="Enter first name..." required>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+    </div>
+     <div class="form-group">
+        <label for="mobilenumber">Mobile Number</label>
+        <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Mobile number" required>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Join Course" class="btn btn-primary">
+    </div>
+</form>
+{{/entries}}
+</body>
+</html>

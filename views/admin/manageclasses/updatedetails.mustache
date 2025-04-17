@@ -1,0 +1,40 @@
+<html>
+<head>
+{{>partials/header}}
+</head>
+{{#class}}
+<body class="container-fluid py-5 bg-lightr">
+<h2>{{title}} for {{name}}</h2>
+
+
+<form method="post" role="/dashboard/course/{{courseid}}/manageclass/{{_id}}/updateclass">
+                    <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name"placeholder="classname" value="{{name}}" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="duration">Price</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Price" value="{{price}}"required>
+                    </div>
+                    <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" name="location" placeholder="Location" value="{{location}}"required>
+                    </div>
+                    <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" placeholder="description" rows="3" value="{{description}}"required>
+                    </textarea>
+
+                    <div class="form-group">
+                    <label for="date">Date and Time</label>
+                    <input type="datetime-local" class="form-control" id="datetime" name="datetime" required >
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <input type="submit" value="Post course" class="btn btn-primary">
+                    </div>
+                    </form>
+                    <a href="/dashboard/course/{{courseid}}/manageclass"class="btn btn-primary">Cancel Changes</a>
+</body>
+{{/class}}
+</html>

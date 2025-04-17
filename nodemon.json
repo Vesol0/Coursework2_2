@@ -1,0 +1,6 @@
+{
+    "watch": ["views", "routes", "controllers"],
+    "ext": "js,mustache,json",
+    "ignore": ["public/*"],
+    "exec": "node index"
+  }

@@ -1,0 +1,44 @@
+<html>
+
+{{>partials/header}}
+<body class="container-fluid py-5 bg-light">
+   <div class="container my-5">
+    <h1 class="text-center mb-4">{{title}}</h1>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="mb-3">Upcoming Course</h2>
+            <div class="row g-3">
+                {{#upcomingcourse}}
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <a href="viewcourse/{{_id}}" class="btn btn-outline-primary btn-sm mt-2">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                {{/upcomingcourse}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-3">Current Course</h2>
+            <div class="row g-3">
+                {{#currentcourse}}
+                <div class="col-md-4">
+                    <div class="border p-3 rounded shadow-sm h-100">
+                        <p class="mb-2 fw-semibold">{{name}}</p>
+                        <a href="/viewcourse/{{_id}}" class="btn btn-outline-primary btn-sm">View Course</a>
+                    </div>
+                </div>
+                {{/currentcourse}}
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

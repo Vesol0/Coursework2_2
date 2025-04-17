@@ -1,0 +1,40 @@
+<html>
+<head>
+{{>partials/header}}
+</head>
+<body class="container-fluid py-5 bg-light">
+{{#class}}
+<h2>Book Class</h2>
+
+
+<form method="post" role="/course/{{courseid}}/bookclass/{{_id}}">
+    <div class="form-group">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname"placeholder="Enter first name..." required>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+    </div>
+     <div class="form-group">
+        <label for="mobilenumber">Mobile Number</label>
+        <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Mobile number" required>
+    </div>
+        
+    <div class="form-group">
+        <input type="submit" value="Book Class" class="btn btn-primary">
+    </div>
+</form>
+{{/class}}
+
+{{^class}}
+<div>
+<p>Not working</p>
+</div>
+{{/class}}
+</body>
+</html>
