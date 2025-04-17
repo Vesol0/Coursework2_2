@@ -1,3 +1,63 @@
+# Coursework 2 for Web Application Development 2 
+
+
+--- 
+
+
+## Features
+
+### Guests can
+
+- View an overview of the organisation an its class locatioins 
+- View current and upcoming courses which will:
+  - Display course name location
+  - Display date and time of each class
+  - Class description 
+  - Class location
+  - Class price
+- Also can enrol in courses or book a cass
+
+### Organisers (Logged in)
+- Login Portal for Organisers only
+- Add new courses and classes 
+- delete existing courses and classes
+- Update class details (e.g. name, location, price)
+- Generate class lists with participants's
+- Manage other organisers and remove users from the system, also can upgrade a regular user to an organiser.
+- Organisers can log out
+
+---
+
+Tech Stack
+
+- **Node.js**
+- **Express**
+- **Mustache Templates**
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Install Node.js 
+
+### Installation
+
+1. Clone the repository
+
+2. CD to respository 
+
+3. 'npm install' (installs all the packages required)
+
+
+### How to Run
+
+To run the Web Application, we use 'node index'.
+
+
+
+
 
 
 
