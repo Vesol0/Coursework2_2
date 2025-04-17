@@ -53,17 +53,12 @@ exports.show_login_page = function(req, res) {
     res.render("user/login");
 }; 
 
-//middleware
 
-exports.login = function (req, res, next) {
-    next() 
-}
+
 
 //handle 
 exports.handle_login = function (req, res){
-    req.render("/", {
-        user: "user"
-    })
+   res.redirect("/dashboard")
 }
 //handle logout
 exports.logout = function(req, res){
@@ -157,7 +152,7 @@ exports.post_join_course = function(req, res){
   exports.show_dashboard = function(req, res){
     db.getAllCourses().then((list) =>{
         res.render("admin/dashboard", {
-            title: "Guest book",
+            title: "Dashboard",
             course: list, // populate courses with get all courses method
         });
         console.log("promise resolved") 
