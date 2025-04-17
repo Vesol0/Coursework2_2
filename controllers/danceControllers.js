@@ -208,8 +208,8 @@ exports.post_join_course = function(req, res){
         const class_id = req.params.classid //get class id 
         classModel.removeClass(class_id, course_id).then(success =>{ // execute removeclass if success then
             if(success){
-                console.log("class removed:", req.body.name)
-                res.render("/dashboard")
+                console.log("class removed:",)
+                res.redirect("/dashboard")
             }
             else{
                 console.log("no class removed")
@@ -304,7 +304,7 @@ exports.post_join_course = function(req, res){
 
         classModel.updateClass(req.body.name, req.body.description, req.body.price, req.body.location, req.body.datetime, course_id, class_id) // update class based on the request
         
-        res.render("/dashboard")
+        res.redirect("/dashboard")
 
         
     }
